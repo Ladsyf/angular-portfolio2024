@@ -1,0 +1,14 @@
+:host {
+  flex: 1;
+  display: flex;
+}
+section {
+  flex: 1;
+  margin: 2rem 4rem;
+}
+
+@media screen and (max-width: 770px) {
+  section {
+    margin: 0;
+  }
+}

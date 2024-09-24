@@ -1,0 +1,41 @@
+aside {
+  width: 20rem;
+  background-color: var(--lightest-color);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 5;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.048);
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  text-align: center;
+  cursor: pointer;
+  font-family: 'montserrat bold';
+  transition: .2s
+}
+
+li:hover, li.router-link-active {
+  font-family: 'montserrat bolder';
+
+  scale: 1.2;
+}
+
+li + li {
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 770px)
+{
+  aside {
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  height: 100%;
+}
+
+button {
+  background-color: var(--darkest-color);
+  border: none;
+  cursor: pointer;
+  color: var(--lightest-color);
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-family: 'montserrat bold';
+}

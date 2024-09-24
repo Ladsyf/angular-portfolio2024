@@ -1,0 +1,9 @@
+<ng-container *ngrxLet="navigation$ as nav">
+  <app-icon-button (click)="toggle()">
+    <div [@toggle]="nav.navbarOpened ? 'opened' : 'closed'" [ngClass]="{ 'opened' : nav.navbarOpened}" >
+      <span class="full-first"></span>
+      <span class="full"></span>
+      <span class="half"></span>
+    </div>
+  </app-icon-button>
+</ng-container>

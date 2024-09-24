@@ -1,0 +1,4 @@
+<section *ngrxLet="navigation$ as nav">
+  <ng-content />
+  <app-background [@backgroundSlide]="nav.routePathValue" />
+</section>

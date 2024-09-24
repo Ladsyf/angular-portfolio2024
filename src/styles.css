@@ -1,0 +1,20 @@
+@import url("./styles/colors.css");
+@import url("./styles/fonts.css");
+@import url("./styles/reset.css");
+@import url("./styles/sizes.css");
+
+* {
+    font-family: 'montserrat';
+    color: var(--darkest-color);
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

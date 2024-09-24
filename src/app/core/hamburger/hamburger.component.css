@@ -1,0 +1,38 @@
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 30px;
+  width: 30px;
+  align-items: end;
+  z-index: 10;
+  position: relative
+}
+
+span {
+  width: 30px;
+  height: 2px;
+  background-color: var(--darkest-color);
+}
+
+span:nth-last-child(1)
+{
+  width: 20px;
+}
+
+.opened > span:nth-child(1) {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  position: relative;
+  top: 4px;
+  right: 5px;
+}
+
+.opened > span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.opened > span:nth-last-child(1)
+{
+  width: 0;
+}

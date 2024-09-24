@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex: 1;
+}

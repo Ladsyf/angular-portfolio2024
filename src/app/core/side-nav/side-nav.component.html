@@ -1,0 +1,11 @@
+<ng-container *ngrxLet="navigation$ as nav">
+  <aside *ngIf="nav.navbarOpened" @toggle>
+    <nav>
+      <ul>
+        <li *ngFor="let menu of menus" [routerLink]="[menu.path]" exavc routerLinkActive="router-link-active" (click)="closeNav()" [routerLinkActiveOptions]="{exact: true}" >
+          {{ menu.caption }}
+        </li>
+      </ul>
+    </nav>
+  </aside>
+</ng-container>
