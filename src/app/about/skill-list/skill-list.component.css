@@ -1,7 +1,30 @@
-:host {
-  display: flex;
-  margin: 1rem;
+div.list {
+  display: grid;
+  margin: 2rem;
   gap: 2rem;
-  max-width: 40rem;
-  flex-wrap: wrap;
+  grid-template-columns: auto auto auto auto auto;
+  width: fit-content
+}
+
+div.paging{
+  margin: auto;
+  width: fit-content;
+}
+
+@media screen and (max-width: 1000px) {
+  div.list {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  div.list {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.list {
+    grid-template-columns: auto auto;
+  }
 }

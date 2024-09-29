@@ -9,6 +9,12 @@ section {
 
 @media screen and (max-width: 770px) {
   section {
-    margin: 0;
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    margin: 1rem;
   }
 }

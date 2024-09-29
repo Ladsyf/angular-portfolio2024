@@ -1,4 +1,4 @@
-const ASSETS_FOLDER_PREPEND = "/assets/";
+const PERSONAL_ASSETS_PATH = "/assets/personal/";
 
 const firstName = "Almar";
 const lastName = "Javier";
@@ -14,8 +14,8 @@ let links = {
 
 links = {
   ...links,
-  curriculumvitae: `${ASSETS_FOLDER_PREPEND}${links.curriculumvitae}`,
-  logo: `${ASSETS_FOLDER_PREPEND}${links.logo}`,
+  curriculumvitae: `${PERSONAL_ASSETS_PATH}${links.curriculumvitae}`,
+  logo: `${PERSONAL_ASSETS_PATH}${links.logo}`,
 }
 const fullName = `${firstName} ${lastName}`;
 

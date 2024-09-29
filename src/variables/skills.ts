@@ -3,67 +3,71 @@ export interface ISkill {
   name: string;
 }
 
-const skillsAssetPath = "assets/skills/";
+const SKILLS_ASSETS_PATH = "assets/skills/";
+const getSkillsFilePath = (fileName: string) => `${SKILLS_ASSETS_PATH}${fileName}`
 
-export const skills: ISkill[] = [
+const _skills: ISkill[] = [
   {
-    logo: getSkillsFilePath("angular-icon.svg"),
+    logo: "angular-icon.svg",
     name: "Angular"
   },
   {
-    logo: getSkillsFilePath("react-icon.svg"),
+    logo: "react-icon.svg",
     name: "React"
   },
   {
-    logo: getSkillsFilePath("dotnet-icon.svg"),
+    logo: "dotnet-icon.svg",
     name: ".Net Core"
   },
   {
-    logo: getSkillsFilePath("nodejs-icon.svg"),
+    logo: "nodejs-icon.svg",
     name: "Nodejs"
   },
   {
-    logo: getSkillsFilePath("laravel-icon.svg"),
+    logo: "laravel-icon.svg",
     name: "Laravel"
   },
   {
-    logo: getSkillsFilePath("mysql-icon.svg"),
+    logo: "mysql-icon.svg",
     name: "MySQL"
   },
   {
-    logo: getSkillsFilePath("mongodb-icon.svg"),
+    logo: "mongodb-icon.svg",
     name: "MongoDB"
   },
   {
-    logo: getSkillsFilePath("sql-icon.svg"),
+    logo: "sql-icon.svg",
     name: "SQL"
   },
   {
-    logo: getSkillsFilePath("php-icon.svg"),
+    logo: "php-icon.svg",
     name: "PHP"
   },
   {
-    logo: getSkillsFilePath("csharp-icon.svg"),
+    logo: "csharp-icon.svg",
     name: "C#"
   },
   {
-    logo: getSkillsFilePath("typescript-icon.svg"),
+    logo: "typescript-icon.svg",
     name: "TypeScript"
   },
   {
-    logo: getSkillsFilePath("javascript-icon.svg"),
+    logo: "javascript-icon.svg",
     name: "JavaScript"
   },
   {
-    logo: getSkillsFilePath("html-icon.svg"),
+    logo: "html-icon.svg",
     name: "HTML5"
   },
   {
-    logo: getSkillsFilePath("css-icon.svg"),
+    logo: "css-icon.svg",
     name: "CSS3"
   },
 ]
 
-function getSkillsFilePath(fileName: string) {
-  return `${skillsAssetPath}${fileName}`;
-}
+export const skills = _skills.map(x => {
+  return {
+    ...x,
+    logo: getSkillsFilePath(x.logo)
+  }
+});

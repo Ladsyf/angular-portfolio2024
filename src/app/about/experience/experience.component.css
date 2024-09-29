@@ -1,11 +1,19 @@
 h2 {
   font-family: 'montserrat bolder';
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+:host {
+  display: block;
 }
 
-:host {
-  width: fit-content;
-  height: fit-content;
-  margin: 0 auto;
-  max-width: 70rem;
+@media screen and (max-width: 1000px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }

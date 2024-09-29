@@ -1,1 +1,6 @@
-<app-experience-record *ngFor="let record of experiences" [record]="record" />
+<div class="list">
+  <app-experience-record *ngFor="let record of experiences" [record]="record" />
+</div>
+<div class="paging" *ngIf="numberOfPages > 1">
+  <app-page-selector *ngFor="let item of [].constructor(numberOfPages); index as i" (click)="changeCurrentPage(i)" />
+</div>

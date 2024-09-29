@@ -10,6 +10,7 @@ import { ExperienceListComponent } from './experience-list/experience-list.compo
 import { SkillComponent } from './skill/skill.component';
 import { SkillListComponent } from './skill-list/skill-list.component';
 import { SkillRecordComponent } from './skill-record/skill-record.component';
+import { PageSelectorComponent } from './page-selector/page-selector.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SkillRecordComponent } from './skill-record/skill-record.component';
     ExperienceListComponent,
     SkillComponent,
     SkillListComponent,
-    SkillRecordComponent
+    SkillRecordComponent,
+    PageSelectorComponent
   ],
   imports: [
     SharedModule,

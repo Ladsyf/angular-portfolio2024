@@ -1,1 +1,6 @@
-<app-skill-record *ngFor="let skill of skills" [record]="skill" />
+<div class="list">
+  <app-skill-record *ngFor="let skill of skills" [record]="skill" />
+</div>
+<div class="paging" *ngIf="numberOfPages > 1">
+  <app-page-selector *ngFor="let item of [].constructor(numberOfPages); index as i" (click)="changeCurrentPage(i)" />
+</div>

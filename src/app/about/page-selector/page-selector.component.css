@@ -1,0 +1,13 @@
+svg {
+  --heightWidth: 1rem;
+  height: var(--heightWidth);
+  width: var(--heightWidth);
+  transition: .2s rotate;
+}
+svg:hover {
+  rotate: 360deg;
+}
+:host {
+  cursor: pointer;
+  margin: .2rem;
+}
