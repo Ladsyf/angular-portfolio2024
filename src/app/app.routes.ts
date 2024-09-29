@@ -1,8 +1,8 @@
+import { Type } from '@angular/core';
 import { Routes } from '@angular/router';
 import { BackgroundComponent as AboutBackgroundComponent } from './about/background/background.component';
 import { BackgroundComponent as HomeBackgroundComponent } from './home/background/background.component';
 import { BackgroundComponent as ProjectsBackgroundComponent } from './projects/background/background.component';
-import { Component, Type } from '@angular/core';
 
 export enum RoutePathValue {
   home = 0,

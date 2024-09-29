@@ -1,5 +1,4 @@
-import { trigger, transition, group, query, style, animate } from "@angular/animations";
-
+import { trigger, transition, group, query, style, animate, stagger } from "@angular/animations";
 
 const DEFAULT_EASE = ".5s ease";
 
@@ -31,5 +30,5 @@ export const backgroundSlideTrigger = trigger("backgroundSlide", [
         ]),
       ]
     )
-  ])
+  ]),
 ])
