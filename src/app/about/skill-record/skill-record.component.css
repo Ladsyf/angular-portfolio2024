@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  cursor: pointer;
+  transition: .2s scale;
+}
+
+img {
+  --heightWidth: 3rem;
+  height: var(--heightWidth);
+  width: var(--heightWidth);
+}
+
+:host:hover {
+  scale: 1.2;
+}

@@ -4,11 +4,23 @@ import { SharedModule } from '../shared/shared.module';
 import { AboutComponent } from './about.component';
 import { BackgroundComponent } from './background/background.component';
 import { routes } from './routes';
+import { ExperienceComponent } from './experience/experience.component';
+import { ExperienceRecordComponent } from './experience-record/experience-record.component';
+import { ExperienceListComponent } from './experience-list/experience-list.component';
+import { SkillComponent } from './skill/skill.component';
+import { SkillListComponent } from './skill-list/skill-list.component';
+import { SkillRecordComponent } from './skill-record/skill-record.component';
 
 @NgModule({
   declarations: [
     AboutComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    ExperienceComponent,
+    ExperienceRecordComponent,
+    ExperienceListComponent,
+    SkillComponent,
+    SkillListComponent,
+    SkillRecordComponent
   ],
   imports: [
     SharedModule,

@@ -1,10 +1,8 @@
-import { Component, HostListener } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { INavigationState } from '../store/navigation.state';
-import { selectRoutePathValue } from '../store/navigation.selectors';
-import { changeRoutePathValue } from '../store/navigation.actions';
-import { getRoutePath, RoutePathValue } from '../../app.routes';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { getRoutePath, RoutePathValue } from '../../app.routes';
+import { INavigationState } from '../store/navigation.state';
 
 @Component({
   selector: 'app-layout',
@@ -12,7 +10,6 @@ import { Router } from '@angular/router';
   styleUrl: './layout.component.css'
 })
 export class LayoutComponent {
-
   private currentRoutePathValue!: RoutePathValue;
   private isNavigationEnabled: boolean = true;
 

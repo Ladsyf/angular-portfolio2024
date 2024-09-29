@@ -1,0 +1,40 @@
+:host {
+  margin: 1rem;
+}
+
+:host,
+div.info,
+div.header {
+  display: flex;
+  gap: 1rem;
+}
+
+div.info,
+div.header {
+  flex-direction: column;
+}
+
+img {
+  --heightWidth: 5rem;
+  height: var(--heightWidth);
+  width: var(--heightWidth);
+}
+
+div.info {
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3,
+div.details {
+  font-size: 0.9rem;
+}
+
+div.header {
+  font-family: "montserrat bolder";
+  gap: initial;
+}
