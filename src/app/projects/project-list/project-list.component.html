@@ -1,7 +1,7 @@
 <div class="list">
-  @for (experience of filteredRecords; track $index)
+  @for (project of filteredRecords; track $index)
   {
-    <app-experience-record [record]="experience" />
+    <app-project-record [record]="project" />
   }
 </div>
 <app-paging (onChangeCurrentPage)="changeCurrentPage($event)" [currentPage]="currentPage" [numberOfPages]="numberOfPages" />

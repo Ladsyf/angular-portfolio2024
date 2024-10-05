@@ -1,0 +1,9 @@
+@if (numberOfPages > 1)
+{
+  <div class="paging">
+    @for (item of [].constructor(numberOfPages); track $index; let i = $index )
+    {
+      <app-page-selector (click)="onChangeCurrentPage.emit(i+1)" [isSelected]="i+1 === currentPage" />
+    }
+  </div>
+}

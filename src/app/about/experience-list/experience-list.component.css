@@ -2,8 +2,3 @@ div.list {
   display: flex;
   gap: 1rem;
 }
-
-div.paging{
-  margin: auto;
-  width: fit-content;
-}

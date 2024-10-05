@@ -11,4 +11,9 @@ button {
   padding: 0.5rem;
   border-radius: 0.2rem;
   font-family: 'montserrat bold';
+  transition: .2s scale;
+}
+
+button:hover {
+  scale: 1.2;
 }

@@ -6,11 +6,6 @@ div.list {
   width: fit-content
 }
 
-div.paging{
-  margin: auto;
-  width: fit-content;
-}
-
 @media screen and (max-width: 1000px) {
   div.list {
     grid-template-columns: auto auto auto auto;

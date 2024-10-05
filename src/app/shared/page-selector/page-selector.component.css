@@ -11,3 +11,6 @@ svg:hover {
   cursor: pointer;
   margin: .2rem;
 }
+svg.selected > path {
+  fill: #565656;
+}

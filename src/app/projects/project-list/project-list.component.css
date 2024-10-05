@@ -1,0 +1,27 @@
+div.list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+div.paging{
+  margin: auto;
+  width: fit-content;
+}
+
+@media screen and (max-width: 900px) {
+  div.list {
+    grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+  div.list {
+    grid-template-columns: auto;
+  }
+}

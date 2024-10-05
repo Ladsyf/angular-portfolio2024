@@ -1,0 +1,39 @@
+:host {
+  cursor: pointer;
+}
+
+div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12rem;
+  width: 18rem;
+  overflow: hidden;
+  border-radius: 5px;
+  gap: .2rem;
+}
+
+img.project-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+img.logo {
+  --heightWidth: 3rem;
+  height: var(--heightWidth);
+  width: var(--heightWidth);
+}
+
+h3 {
+  color: white;
+  font-family: "montserrat bolder";
+  font-size: 2rem;
+}
+@media screen and (max-width: 1055px) {
+  div {
+    height: 10rem;
+    width: 15rem;
+  }
+}

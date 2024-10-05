@@ -4,11 +4,15 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { ButtonComponent } from './button/button.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { LetDirective } from '@ngrx/component';
+import { PageSelectorComponent } from './page-selector/page-selector.component';
+import { PagingComponent } from './paging/paging.component';
 
 @NgModule({
   declarations: [
     IconButtonComponent,
-    ButtonComponent
+    ButtonComponent,
+    PageSelectorComponent,
+    PagingComponent,
   ],
   imports: [
     CommonModule,
@@ -23,6 +27,8 @@ import { LetDirective } from '@ngrx/component';
     RouterLink,
     RouterModule,
     LetDirective,
+    PageSelectorComponent,
+    PagingComponent,
   ]
 })
 export class SharedModule { }

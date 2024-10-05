@@ -1,0 +1,11 @@
+<div class="card" [ngStyle]="{ backgroundColor: record.hexColor }">
+  <img
+    class="project-background"
+    [src]="record.thumbnail"
+    style="opacity: 0.05"
+  />
+  <img class="logo" [src]="record.logo" />
+  <h3>
+    {{ record.title }}
+  </h3>
+</div>

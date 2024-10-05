@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-page-selector',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './page-selector.component.css'
 })
 export class PageSelectorComponent {
-
+  @Input() isSelected: boolean = false;
 }

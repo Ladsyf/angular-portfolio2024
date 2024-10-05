@@ -4,7 +4,7 @@ const enterTransition = transition(':enter',
   [
     query('*',
       [style({ opacity: 0, scale: 0 }),
-      stagger('.05s', animate('.2s .3s ease')),
+      stagger('.05s', animate('.2s .3s ease', style({ scale: "*", opacity: "*" }))),
       ]
     )
   ]
