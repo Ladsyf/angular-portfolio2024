@@ -1,0 +1,1 @@
+import{E as i,Ua as e,x as o}from"./chunk-HPSRC4AD.js";var r=class t{static \u0275fac=function(a){return new(a||t)};static \u0275mod=i({type:t});static \u0275inj=o({imports:[e]})};export{r as ProjectDetailModule};
