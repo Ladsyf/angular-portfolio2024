@@ -53,6 +53,7 @@ export class LayoutComponent {
     this.disabledNavigation();
 
     const nextPathValue = this.currentRoutePathValue + (isIncrement ? 1 : -1);
+
     const nextPath = getRoutePath(nextPathValue);
 
     if (nextPath == null) {

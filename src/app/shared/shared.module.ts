@@ -6,6 +6,8 @@ import { IconButtonComponent } from './icon-button/icon-button.component';
 import { LetDirective } from '@ngrx/component';
 import { PageSelectorComponent } from './page-selector/page-selector.component';
 import { PagingComponent } from './paging/paging.component';
+import { ModalComponent } from './modal/modal.component';
+import { BackgroundComponent as ProjectBackgroundComponent} from '../projects/background/background.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { PagingComponent } from './paging/paging.component';
     ButtonComponent,
     PageSelectorComponent,
     PagingComponent,
+    ModalComponent,
+    ProjectBackgroundComponent,
   ],
   imports: [
     CommonModule,
@@ -29,6 +33,7 @@ import { PagingComponent } from './paging/paging.component';
     LetDirective,
     PageSelectorComponent,
     PagingComponent,
+    ModalComponent,
   ]
 })
 export class SharedModule { }

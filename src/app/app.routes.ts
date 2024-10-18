@@ -12,42 +12,51 @@ export enum RoutePathValue {
 
 export interface IRoutePath {
   caption: string,
-  value: RoutePathValue,
+  value?: RoutePathValue,
   path: string,
-  background: Type<object>
+  background: Type<object>,
+  scrollable?: boolean
 }
 
-export const routePaths: IRoutePath[] = [
-  {
+const routePathDictionary: Record<string | RoutePathValue, IRoutePath> =
+{
+  [RoutePathValue.home]: {
     caption: "Home",
     value: RoutePathValue.home,
     path: "",
     background: HomeBackgroundComponent
   },
-  {
+  [RoutePathValue.about]: {
     caption: "About",
     value: RoutePathValue.about,
     path: "about",
     background: AboutBackgroundComponent
   },
-  {
+  [RoutePathValue.projects]: {
     caption: "Projects",
     value: RoutePathValue.projects,
     path: "projects",
     background: ProjectsBackgroundComponent
+  },
+  ["project-detail"]: {
+    caption: "Project Detail",
+    path: "project-detail",
+    background: ProjectsBackgroundComponent,
+    scrollable: true,
   }
-]
-
-export function getRoutePath(value: RoutePathValue): string | undefined {
-  return routePaths.find(x => x.value === value)?.path ?? undefined;
 }
 
-export function getRouteValue(path: string): RoutePathValue {
+export const routePaths: IRoutePath[] = Object.values(routePathDictionary);
+
+export function getRoutePath(key: RoutePathValue | string): string | undefined {
+  return routePathDictionary[key]?.path ?? undefined;
+}
+
+export function getRoutePathValue(path: string): RoutePathValue {
   return routePaths.find(x => x.path === path)?.value ?? RoutePathValue.home;
 }
 
-export const getRouteInfo = (predicate: (value: typeof routePaths[0]) => boolean): typeof routePaths[0] =>
-{
+export const getRouteInfo = (predicate: (value: typeof routePaths[0]) => boolean): typeof routePaths[0] => {
   return routePaths.find(predicate) ?? routePaths[0];
 }
 
@@ -63,6 +72,10 @@ export const routes: Routes = [
   {
     path: getRoutePath(RoutePathValue.projects),
     loadChildren: () => import("./projects/projects.module").then(m => m.ProjectsModule),
+  },
+  {
+    path: getRoutePath("project-detail"),
+    loadChildren: () => import("./project-detail/project-detail.module").then(m => m.ProjectDetailModule)
   },
   {
     path: "**",

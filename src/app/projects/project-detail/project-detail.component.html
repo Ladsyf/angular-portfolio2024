@@ -1,0 +1,26 @@
+<h1>
+  {{ record.fullTitle }}
+</h1>
+<h2>
+  {{ record.subheading }}
+</h2>
+<span>
+  {{ record.date | date : "MMM, y" }}
+</span>
+<article class="details">
+  @for (paragraph of record.paragraphs; track $index;) { @let obj =
+  convertToProjectParagraph(paragraph);
+  <div>
+    @if (obj.description) {
+    <img [src]="obj.photo" class="paragraph-image" />
+    <p>
+      {{ obj.description }}
+    </p>
+    } @else {
+    <p>
+      {{ paragraph }}
+    </p>
+    }
+  </div>
+  }
+</article>

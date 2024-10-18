@@ -1,0 +1,12 @@
+h1 {
+  font-family: "montserrat bolder";
+  font-size: 2rem;
+}
+h2 {
+  font-family: "montserrat bold";
+  font-size: 1.2rem;
+}
+
+.paragraph-image {
+  width: 100%;
+}

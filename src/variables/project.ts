@@ -1,5 +1,6 @@
 export interface IProject {
-  title: string;
+  id: string;
+  shortTitle: string;
   fullTitle: string;
   subheading: string;
   tech: string[];
@@ -25,9 +26,9 @@ const PROJECT_ASSETS_PATH = "assets/projects/";
 
 const getProjectFilePath = (filename: string) => `${PROJECT_ASSETS_PATH}${filename}`;
 
-const _projects: IProject[] = [
+const _projects: Omit<IProject, "id">[] = [
   {
-    title: "BLSD",
+    shortTitle: "BLSD",
     fullTitle: "BLSD Website",
     subheading: "Landing page for Bridging Leaders for Sustainable Development Inc.",
     date: new Date(2023, 8),
@@ -62,7 +63,7 @@ const _projects: IProject[] = [
     ]
   },
   {
-    title: "CTES",
+    shortTitle: "CTES",
     fullTitle: "Capstone Titles Evaluation System",
     subheading: "Capstone Title Proposal Evaluation system for BulSu IT Students",
     logo: "",
@@ -74,7 +75,7 @@ const _projects: IProject[] = [
     references: []
   },
   {
-    title: "ENVote",
+    shortTitle: "ENVote",
     fullTitle: "ENVote: Online Voting System",
     subheading: "Online Voting System for BPC SG and SSG Election",
     logo: "",
@@ -102,6 +103,7 @@ export const projects: IProject[] = _projects.map(x => {
   const thumbnail = getProjectFilePath(x.thumbnail);
 
   return {
+    id: crypto.randomUUID().toString(),
     ...x,
     logo,
     thumbnail,
