@@ -1,0 +1,1 @@
+import{c as s,d as a,g as e,i as t,j as i,k as n}from"./chunk-VSLMR3JL.js";var o=t(":enter",[i("*",[e({opacity:0,scale:0}),n(".05s",a(".2s .3s ease",e({scale:"*",opacity:"*"})))])]),r=t(":leave",[i("*",[e({opacity:"*",scale:"*"}),a(".2s ease",e({scale:"0",opacity:"0"}))])]),p=s("animatePage",[o,r]);export{p as a};
