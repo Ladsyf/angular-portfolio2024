@@ -1,1 +1,0 @@
-import{E as i,Sa as e,x as o}from"./chunk-MUEPOQKK.js";var r=class t{static \u0275fac=function(a){return new(a||t)};static \u0275mod=i({type:t});static \u0275inj=o({imports:[e]})};export{r as ProjectDetailModule};
