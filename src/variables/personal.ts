@@ -1,4 +1,4 @@
-const PERSONAL_ASSETS_PATH = "/assets/personal/";
+const PERSONAL_ASSETS_PATH = "assets/personal/";
 
 const firstName = "Almar";
 const lastName = "Javier";

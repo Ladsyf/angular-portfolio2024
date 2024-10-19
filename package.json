@@ -6,7 +6,7 @@
     "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "github-deploy": "ng deploy --base-href=/angular-portfolio2024",
+    "github-deploy": "ng deploy --repo=https://github.com/ladsyf/angular-portfolio2024.git --base-href=/angular-portfolio2024/",
     "test": "ng test"
   },
   "private": true,

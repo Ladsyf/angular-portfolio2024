@@ -19,7 +19,7 @@ export class SideNavComponent {
     this.navigation$ = _store.select('navigation');
   }
 
-  public menus = routePaths;
+  public menus = routePaths.filter(x => !x.scrollable);
 
   public closeNav()
   {
